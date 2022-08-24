@@ -105,6 +105,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
                 onChange={handleSizeChange}
                 type="checkbox"
                 name="size"
+                id='S'
               />
               S
             </label>
@@ -118,6 +119,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
                 onChange={handleSizeChange}
                 type="checkbox"
                 name="size"
+                id='M'
               />
               M
             </label>
@@ -131,6 +133,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
                 onChange={handleSizeChange}
                 type="checkbox"
                 name="size"
+                id='L'
               />
               L
             </label>
@@ -144,6 +147,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
                 onChange={handleSizeChange}
                 type="checkbox"
                 name="size"
+                id='XL'
               />
               XL
             </label>
