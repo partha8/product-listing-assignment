@@ -3,7 +3,7 @@ import "./filters.css";
 export const Filters = ({ dispatch, filterState, productsList }) => {
   const brandTypes = [...new Set(productsList.map((product) => product.brand))];
 
-  const handleChange = (e) => {
+  const handleBrandChange = (e) => {
     let arr = [...filterState.brandsTypesArray];
     if (e.target.checked) {
       arr.push(e.target.value);
@@ -22,7 +22,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
     } else {
       arr = arr.filter((sizeType) => sizeType !== e.target.value);
     }
-    
+
     dispatch({ type: "SET_SIZE", payload: arr });
   };
 
@@ -81,7 +81,7 @@ export const Filters = ({ dispatch, filterState, productsList }) => {
                     checked={filterState.brandsTypesArray.some(
                       (brandType) => brandType === type
                     )}
-                    onChange={handleChange}
+                    onChange={handleBrandChange}
                     type="checkbox"
                     name="collection"
                     id={type}
